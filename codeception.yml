@@ -1,0 +1,26 @@
+namespace: Delivery\AcceptanceTest
+paths:
+    tests: tests
+    output: tests/_output
+    data: tests/_data
+    support: tests/_support
+    envs: tests/_envs
+actor_suffix: Tester
+extensions:
+    enabled:
+        - Codeception\Extension\RunFailed
+modules:
+    config:
+        Db:
+            dsn: 'pgsql:host=delivery-back.local;dbname=delivery_back'
+            user: 'postgres'
+            password: '123'
+            cleanup: true
+            populate: true
+            dump: 'tests/_data/dump.sql'
+        Redis:
+            host: 'delivery-back.local'
+            port: 6379
+            database: 0
+            password: 123
+            cleanupBefore: 'test'

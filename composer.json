@@ -1,0 +1,13 @@
+{
+    "name": "delivery/delivery-test",
+    "description": "Пакет с приемочными тестами Деливери",
+    "license": "proprietary",
+    "require": {
+        "php": ">=7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Delivery\\DeliveryTest\\": ""
+        }
+    }
+}

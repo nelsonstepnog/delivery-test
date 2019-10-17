@@ -1,0 +1,16 @@
+actor: AcceptanceTester
+modules:
+    enabled:
+        - \Delivery\AcceptanceTest\Helper\Acceptance
+        - \Delivery\AcceptanceTest\Helper\DatabaseHelper
+        - \Delivery\AcceptanceTest\Helper\FuelDatabaseHelper
+        - \Delivery\AcceptanceTest\Helper\VehicleTypeDatabaseHelper
+        - WebDriver:
+            url: 'http://delivery-front.local'
+            host: selenium-chrome
+            port: 4444
+            browser: 'chrome'
+            window_size: 1600x900
+        - Db
+        - Sequence
+        - Redis
